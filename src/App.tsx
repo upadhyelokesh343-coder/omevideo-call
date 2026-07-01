@@ -1,4 +1,4 @@
-i       <div className="space-y-3 lg:space-y-8">
+             <div className="space-y-3 lg:space-y-8">
             <label className="flex items-center gap-2 text-[10px] lg:text-sm font-black uppercase tracking-widest text-slate-500 ml-1">
               <Users size={14} className="lg:w-4 lg:h-4" />
               2. Match With

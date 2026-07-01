@@ -500,3 +500,11 @@ export default function App() {
           {/* ad-banner-top */}
           <div id="ad-banner-top" className="w-full flex justify-center py-2 lg:py-4 shrink-0">
             <div className="w-full max-w-[728px] min-h-[90px] border border-dash
+                    </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+      

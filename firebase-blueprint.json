@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "user": {
+      "title": "User Profile",
+      "description": "User profile and VIP status",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "gender": { "type": "string", "enum": ["male", "female"] },
+        "isVip": { "type": "boolean" },
+        "vipExpiry": { "type": "object", "description": "Firestore Timestamp" },
+        "isGirlsVip": { "type": "boolean" },
+        "girlsVipExpiry": { "type": "object", "description": "Firestore Timestamp" },
+        "isEveryoneVip": { "type": "boolean" },
+        "everyoneVipExpiry": { "type": "object", "description": "Firestore Timestamp" },
+        "createdAt": { "type": "object", "description": "Firestore Timestamp" },
+        "updatedAt": { "type": "object", "description": "Firestore Timestamp" },
+        "bannedUntil": { "type": "object", "description": "Firestore Timestamp, for automatic moderation bans" },
+        "location": { "type": "object", "properties": {
+          "country": { "type": "string" },
+          "countryCode": { "type": "string" },
+          "city": { "type": "string" },
+          "flag": { "type": "string" }
+        }}
+      },
+      "required": ["uid", "gender"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "user",
+      "description": "User profiles and subscription data"
+    },
+    "/users/{userId}/recent_matches/{matchId}": {
+      "description": "History of people met during video calls"
+    },
+    "/conversations/{convId}/messages/{msgId}": {
+      "description": "Direct messages between users"
+    }
+  }
+}

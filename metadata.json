@@ -1,0 +1,6 @@
+{
+  "name": "Omio",
+  "description": "A premium video chat platform with VIP gender filtering and host rewards.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
